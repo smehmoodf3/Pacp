@@ -73,11 +73,11 @@ public class Notification
                     
                     string lang = (language == "Arabic") ? "ar" : "en";
                     //Data post to server   
-                    //Sarim: Adding lang parameter to the GCM postData                                                                                                                  
+                    //Sarim: Adding lang parameter to the GCM postData                                                                                           
                     string postData =
                       "collapse_key=score_update&time_to_live=1208&delay_while_idle=1&data.message="
                        + encodedDescription + "&data.messageType=" + notificationType + "&data.title=" + encodedTitle + "&data.time=" + System.DateTime.Now.ToString() + "&registration_id=" +
-                          regId + "&data.redirect=3" + "&data.alertid=" + alertId + "lang=" + lang;
+                          regId + "&data.redirect=3" + "&data.alertid=" + alertId + "&data.lang=" + lang;
 
                     
                      //Console.WriteLine(postData);
